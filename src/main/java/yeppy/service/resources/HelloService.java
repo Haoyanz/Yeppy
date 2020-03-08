@@ -1,4 +1,4 @@
-package yeppy.service;
+package yeppy.service.resources;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
