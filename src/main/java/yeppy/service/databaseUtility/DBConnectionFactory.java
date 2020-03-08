@@ -21,8 +21,8 @@ public class DBConnectionFactory {
 
     }
 
-    public static Connection getConnection() {
-        return getConnection(DEFAULT_DB).getCon();
-    }
+    //public static Connection getConnection() {
+    //    return getConnection(DEFAULT_DB).getCon();
+    //}
 }
 

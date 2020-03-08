@@ -5,14 +5,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RegisterRequestModel {
     private String username;
-    private char[] password;
+    private String password;
 
     public RegisterRequestModel() {
 
     }
 
     @JsonCreator
-    public RegisterRequestModel(@JsonProperty(value = "username", required = true)String email, @JsonProperty(value = "password", required = true)char[] password) {
+    public RegisterRequestModel(@JsonProperty(value = "username", required = true)String email, @JsonProperty(value = "password", required = true)String password) {
         this.username = email;
         this.password = password;
     }
@@ -25,11 +25,11 @@ public class RegisterRequestModel {
         this.username = username;
     }
 
-    public char[] getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(char[] password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 }

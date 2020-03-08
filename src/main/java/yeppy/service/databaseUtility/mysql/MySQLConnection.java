@@ -1,16 +1,15 @@
 package yeppy.service.databaseUtility.mysql;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.*;
 
 public class MySQLConnection {
     private Connection conn;
 
     public MySQLConnection() {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver").getConstructor().newInstance();
-            conn = DriverManager.getConnection(MySQLDBUtil.URL);
-
+            //Class.forName("com.mysql.cj.jdbc.Driver").getConstructor().newInstance();
+            Class.forName("org.postgresql.Driver");
+            conn = DriverManager.getConnection(MySQLDBUtil.getURL());
         } catch (Exception e) {
             e.printStackTrace();
         }
