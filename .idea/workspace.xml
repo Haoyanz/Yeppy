@@ -7,21 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9989ab70-24c4-4ab7-ac78-0fff388e0cf3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/logger/ServiceFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/logger/ServiceLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/core/Restaurant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/external/YelpClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/models/SearchRequestModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/resources/Search.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yeppy/service/core/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/core/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yeppy/service/databaseUtility/DBConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/databaseUtility/DBConnectionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yeppy/service/databaseUtility/mysql/MySQLConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/databaseUtility/mysql/MySQLConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yeppy/service/databaseUtility/mysql/MySQLDBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/databaseUtility/mysql/MySQLDBUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yeppy/service/models/RegisterRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/models/RegisterRequestModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yeppy/service/models/RegisterResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/models/RegisterResponseModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yeppy/service/resources/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/resources/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yeppy/service/resources/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/resources/Register.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Yeppy.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Yeppy.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Yeppy/WEB-INF/classes/yeppy/service/HelloService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/yeppy/service/HelloService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +214,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583298871732</updated>
-      <workItem from="1583298875387" duration="17674000" />
+      <workItem from="1583298875387" duration="24230000" />
     </task>
     <servers />
   </component>
@@ -242,58 +234,58 @@
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
     <state x="726" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.23.1725.1097@67.23.1725.1097" timestamp="1583637316289" />
-    <state x="741" y="214" key="#com.intellij.ide.util.MemberChooser" timestamp="1583638648772">
+    <state x="741" y="214" key="#com.intellij.ide.util.MemberChooser" timestamp="1583979915924">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state x="741" y="214" key="#com.intellij.ide.util.MemberChooser/67.23.1725.1097@67.23.1725.1097" timestamp="1583638648772" />
-    <state width="1151" height="271" key="GridCell.Tab.0.bottom" timestamp="1583640372995">
+    <state x="741" y="214" key="#com.intellij.ide.util.MemberChooser/67.23.1725.1097@67.23.1725.1097" timestamp="1583979915924" />
+    <state width="1151" height="271" key="GridCell.Tab.0.bottom" timestamp="1583981371578">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.0.bottom/67.23.1725.1097@67.23.1725.1097" timestamp="1583640372995" />
-    <state width="1151" height="271" key="GridCell.Tab.0.center" timestamp="1583640372994">
+    <state width="1151" height="271" key="GridCell.Tab.0.bottom/67.23.1725.1097@67.23.1725.1097" timestamp="1583981371578" />
+    <state width="1151" height="271" key="GridCell.Tab.0.center" timestamp="1583981371577">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.0.center/67.23.1725.1097@67.23.1725.1097" timestamp="1583640372994" />
-    <state width="1151" height="271" key="GridCell.Tab.0.left" timestamp="1583640372994">
+    <state width="1151" height="271" key="GridCell.Tab.0.center/67.23.1725.1097@67.23.1725.1097" timestamp="1583981371577" />
+    <state width="1151" height="271" key="GridCell.Tab.0.left" timestamp="1583981371576">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.0.left/67.23.1725.1097@67.23.1725.1097" timestamp="1583640372994" />
-    <state width="1151" height="271" key="GridCell.Tab.0.right" timestamp="1583640372995">
+    <state width="1151" height="271" key="GridCell.Tab.0.left/67.23.1725.1097@67.23.1725.1097" timestamp="1583981371576" />
+    <state width="1151" height="271" key="GridCell.Tab.0.right" timestamp="1583981371577">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.0.right/67.23.1725.1097@67.23.1725.1097" timestamp="1583640372995" />
-    <state width="1151" height="271" key="GridCell.Tab.1.bottom" timestamp="1583640372826">
+    <state width="1151" height="271" key="GridCell.Tab.0.right/67.23.1725.1097@67.23.1725.1097" timestamp="1583981371577" />
+    <state width="1151" height="271" key="GridCell.Tab.1.bottom" timestamp="1583981371396">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.1.bottom/67.23.1725.1097@67.23.1725.1097" timestamp="1583640372826" />
-    <state width="1151" height="271" key="GridCell.Tab.1.center" timestamp="1583640372825">
+    <state width="1151" height="271" key="GridCell.Tab.1.bottom/67.23.1725.1097@67.23.1725.1097" timestamp="1583981371396" />
+    <state width="1151" height="271" key="GridCell.Tab.1.center" timestamp="1583981371395">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.1.center/67.23.1725.1097@67.23.1725.1097" timestamp="1583640372825" />
-    <state width="1151" height="271" key="GridCell.Tab.1.left" timestamp="1583640372825">
+    <state width="1151" height="271" key="GridCell.Tab.1.center/67.23.1725.1097@67.23.1725.1097" timestamp="1583981371395" />
+    <state width="1151" height="271" key="GridCell.Tab.1.left" timestamp="1583981371395">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.1.left/67.23.1725.1097@67.23.1725.1097" timestamp="1583640372825" />
-    <state width="1151" height="271" key="GridCell.Tab.1.right" timestamp="1583640372826">
+    <state width="1151" height="271" key="GridCell.Tab.1.left/67.23.1725.1097@67.23.1725.1097" timestamp="1583981371395" />
+    <state width="1151" height="271" key="GridCell.Tab.1.right" timestamp="1583981371396">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.1.right/67.23.1725.1097@67.23.1725.1097" timestamp="1583640372826" />
-    <state width="1151" height="271" key="GridCell.Tab.2.bottom" timestamp="1583640372825">
+    <state width="1151" height="271" key="GridCell.Tab.1.right/67.23.1725.1097@67.23.1725.1097" timestamp="1583981371396" />
+    <state width="1151" height="271" key="GridCell.Tab.2.bottom" timestamp="1583981371397">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.2.bottom/67.23.1725.1097@67.23.1725.1097" timestamp="1583640372825" />
-    <state width="1151" height="271" key="GridCell.Tab.2.center" timestamp="1583640372825">
+    <state width="1151" height="271" key="GridCell.Tab.2.bottom/67.23.1725.1097@67.23.1725.1097" timestamp="1583981371397" />
+    <state width="1151" height="271" key="GridCell.Tab.2.center" timestamp="1583981371396">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.2.center/67.23.1725.1097@67.23.1725.1097" timestamp="1583640372825" />
-    <state width="1151" height="271" key="GridCell.Tab.2.left" timestamp="1583640372825">
+    <state width="1151" height="271" key="GridCell.Tab.2.center/67.23.1725.1097@67.23.1725.1097" timestamp="1583981371396" />
+    <state width="1151" height="271" key="GridCell.Tab.2.left" timestamp="1583981371396">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.2.left/67.23.1725.1097@67.23.1725.1097" timestamp="1583640372825" />
-    <state width="1151" height="271" key="GridCell.Tab.2.right" timestamp="1583640372825">
+    <state width="1151" height="271" key="GridCell.Tab.2.left/67.23.1725.1097@67.23.1725.1097" timestamp="1583981371396" />
+    <state width="1151" height="271" key="GridCell.Tab.2.right" timestamp="1583981371397">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.2.right/67.23.1725.1097@67.23.1725.1097" timestamp="1583640372825" />
+    <state width="1151" height="271" key="GridCell.Tab.2.right/67.23.1725.1097@67.23.1725.1097" timestamp="1583981371397" />
     <state x="466" y="185" key="Maven.ArtifactSearchDialog" timestamp="1583634325836">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
@@ -302,5 +294,9 @@
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
     <state x="416" y="104" key="SettingsEditor/67.23.1725.1097@67.23.1725.1097" timestamp="1583443883995" />
+    <state x="591" y="244" width="670" height="676" key="search.everywhere.popup" timestamp="1583974093518">
+      <screen x="67" y="23" width="1725" height="1097" />
+    </state>
+    <state x="591" y="244" width="670" height="676" key="search.everywhere.popup/67.23.1725.1097@67.23.1725.1097" timestamp="1583974093518" />
   </component>
 </project>
