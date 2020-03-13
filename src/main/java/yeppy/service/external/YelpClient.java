@@ -74,8 +74,8 @@ public class YelpClient {
             if (!restaurantObj.isNull("phone")) {
                 restaurant.setPhone(restaurantObj.getString("phone"));
             }
-            if (!restaurantObj.isNull("url")) {
-                restaurant.setUrl(restaurantObj.getString("url"));
+            if (!restaurantObj.isNull("image_url")) {
+                restaurant.setUrl(restaurantObj.getString("image_url"));
             }
             if (!restaurantObj.isNull("location")) {
                 restaurant.setAddress(restaurantObj.getJSONObject("location").getJSONArray("display_address").toString());
