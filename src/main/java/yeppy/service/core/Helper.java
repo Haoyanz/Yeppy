@@ -3,6 +3,8 @@ package yeppy.service.core;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -181,5 +183,29 @@ public class Helper {
             e.printStackTrace();
         }
         return true;
+    }
+
+    public static List<String> getTopCategories(String userId){
+        MySQLConnection db = new MySQLConnection();
+        try {
+            // Construct the query
+            String query =
+                    "SELECT category FROM yeppy.user_preferences WHERE user_id=? ORDER BY count DESC LIMIT 3;";
+            // Create the prepared statement
+            PreparedStatement ps = db.getCon().prepareStatement(query);
+            // Set the parameters
+            ps.setString(1, userId);
+
+            // Execute query
+            ResultSet rs = ps.executeQuery();
+            List<String> list = new ArrayList<>();
+            while(rs.next()){
+                list.add(rs.getString(1));
+            }
+            return list;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

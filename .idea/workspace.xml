@@ -7,15 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9989ab70-24c4-4ab7-ac78-0fff388e0cf3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/models/LikeRequestModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/resources/Like.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/models/RecommendResponseModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/resources/Recommend.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yeppy/service/core/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/core/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Yeppy.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Yeppy.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Yeppy/WEB-INF/classes/yeppy/service/core/Helper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Yeppy/WEB-INF/classes/yeppy/service/core/Helper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Yeppy/WEB-INF/classes/yeppy/service/external/YelpClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Yeppy/WEB-INF/classes/yeppy/service/external/YelpClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/yeppy/service/core/Helper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/yeppy/service/core/Helper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/yeppy/service/external/YelpClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/yeppy/service/external/YelpClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yeppy/service/external/YelpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yeppy/service/external/YelpClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +212,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583298871732</updated>
-      <workItem from="1583298875387" duration="28285000" />
+      <workItem from="1583298875387" duration="31400000" />
     </task>
     <servers />
   </component>
@@ -236,58 +232,58 @@
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
     <state x="726" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.23.1725.1097@67.23.1725.1097" timestamp="1583637316289" />
-    <state x="741" y="214" key="#com.intellij.ide.util.MemberChooser" timestamp="1584142615024">
+    <state x="741" y="214" key="#com.intellij.ide.util.MemberChooser" timestamp="1584213376612">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state x="741" y="214" key="#com.intellij.ide.util.MemberChooser/67.23.1725.1097@67.23.1725.1097" timestamp="1584142615024" />
-    <state width="1151" height="271" key="GridCell.Tab.0.bottom" timestamp="1584145683317">
+    <state x="741" y="214" key="#com.intellij.ide.util.MemberChooser/67.23.1725.1097@67.23.1725.1097" timestamp="1584213376612" />
+    <state width="1151" height="271" key="GridCell.Tab.0.bottom" timestamp="1584224095387">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.0.bottom/67.23.1725.1097@67.23.1725.1097" timestamp="1584145683317" />
-    <state width="1151" height="271" key="GridCell.Tab.0.center" timestamp="1584145683316">
+    <state width="1151" height="271" key="GridCell.Tab.0.bottom/67.23.1725.1097@67.23.1725.1097" timestamp="1584224095387" />
+    <state width="1151" height="271" key="GridCell.Tab.0.center" timestamp="1584224095384">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.0.center/67.23.1725.1097@67.23.1725.1097" timestamp="1584145683316" />
-    <state width="1151" height="271" key="GridCell.Tab.0.left" timestamp="1584145683315">
+    <state width="1151" height="271" key="GridCell.Tab.0.center/67.23.1725.1097@67.23.1725.1097" timestamp="1584224095384" />
+    <state width="1151" height="271" key="GridCell.Tab.0.left" timestamp="1584224095383">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.0.left/67.23.1725.1097@67.23.1725.1097" timestamp="1584145683315" />
-    <state width="1151" height="271" key="GridCell.Tab.0.right" timestamp="1584145683316">
+    <state width="1151" height="271" key="GridCell.Tab.0.left/67.23.1725.1097@67.23.1725.1097" timestamp="1584224095383" />
+    <state width="1151" height="271" key="GridCell.Tab.0.right" timestamp="1584224095386">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.0.right/67.23.1725.1097@67.23.1725.1097" timestamp="1584145683316" />
-    <state width="1151" height="271" key="GridCell.Tab.1.bottom" timestamp="1584145683226">
+    <state width="1151" height="271" key="GridCell.Tab.0.right/67.23.1725.1097@67.23.1725.1097" timestamp="1584224095386" />
+    <state width="1151" height="271" key="GridCell.Tab.1.bottom" timestamp="1584224095296">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.1.bottom/67.23.1725.1097@67.23.1725.1097" timestamp="1584145683226" />
-    <state width="1151" height="271" key="GridCell.Tab.1.center" timestamp="1584145683226">
+    <state width="1151" height="271" key="GridCell.Tab.1.bottom/67.23.1725.1097@67.23.1725.1097" timestamp="1584224095296" />
+    <state width="1151" height="271" key="GridCell.Tab.1.center" timestamp="1584224095296">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.1.center/67.23.1725.1097@67.23.1725.1097" timestamp="1584145683226" />
-    <state width="1151" height="271" key="GridCell.Tab.1.left" timestamp="1584145683225">
+    <state width="1151" height="271" key="GridCell.Tab.1.center/67.23.1725.1097@67.23.1725.1097" timestamp="1584224095296" />
+    <state width="1151" height="271" key="GridCell.Tab.1.left" timestamp="1584224095295">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.1.left/67.23.1725.1097@67.23.1725.1097" timestamp="1584145683225" />
-    <state width="1151" height="271" key="GridCell.Tab.1.right" timestamp="1584145683226">
+    <state width="1151" height="271" key="GridCell.Tab.1.left/67.23.1725.1097@67.23.1725.1097" timestamp="1584224095295" />
+    <state width="1151" height="271" key="GridCell.Tab.1.right" timestamp="1584224095296">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.1.right/67.23.1725.1097@67.23.1725.1097" timestamp="1584145683226" />
-    <state width="1151" height="271" key="GridCell.Tab.2.bottom" timestamp="1584145683225">
+    <state width="1151" height="271" key="GridCell.Tab.1.right/67.23.1725.1097@67.23.1725.1097" timestamp="1584224095296" />
+    <state width="1151" height="271" key="GridCell.Tab.2.bottom" timestamp="1584224095295">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.2.bottom/67.23.1725.1097@67.23.1725.1097" timestamp="1584145683225" />
-    <state width="1151" height="271" key="GridCell.Tab.2.center" timestamp="1584145683225">
+    <state width="1151" height="271" key="GridCell.Tab.2.bottom/67.23.1725.1097@67.23.1725.1097" timestamp="1584224095295" />
+    <state width="1151" height="271" key="GridCell.Tab.2.center" timestamp="1584224095294">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.2.center/67.23.1725.1097@67.23.1725.1097" timestamp="1584145683225" />
-    <state width="1151" height="271" key="GridCell.Tab.2.left" timestamp="1584145683224">
+    <state width="1151" height="271" key="GridCell.Tab.2.center/67.23.1725.1097@67.23.1725.1097" timestamp="1584224095294" />
+    <state width="1151" height="271" key="GridCell.Tab.2.left" timestamp="1584224095294">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.2.left/67.23.1725.1097@67.23.1725.1097" timestamp="1584145683224" />
-    <state width="1151" height="271" key="GridCell.Tab.2.right" timestamp="1584145683225">
+    <state width="1151" height="271" key="GridCell.Tab.2.left/67.23.1725.1097@67.23.1725.1097" timestamp="1584224095294" />
+    <state width="1151" height="271" key="GridCell.Tab.2.right" timestamp="1584224095294">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>
-    <state width="1151" height="271" key="GridCell.Tab.2.right/67.23.1725.1097@67.23.1725.1097" timestamp="1584145683225" />
+    <state width="1151" height="271" key="GridCell.Tab.2.right/67.23.1725.1097@67.23.1725.1097" timestamp="1584224095294" />
     <state width="1151" height="271" key="GridCell.Tab.3.bottom" timestamp="1584145336614">
       <screen x="67" y="23" width="1725" height="1097" />
     </state>

@@ -103,4 +103,80 @@ public class YelpClient {
         }
         return categories;
     }
+
+    public static List<Restaurant> searchMostPopular(float lat, float lon){
+        String query = String.format("latitude=%s&longitude=%s&categories=%s&sort_by=rating&limit=10&radius=16000",lat, lon, "Restaurant");
+        String url = HOST + ENDPOINT + "?" + query;
+        StringBuilder responseBody = new StringBuilder();
+        try{
+            HttpURLConnection connection = (HttpURLConnection)new URL(url).openConnection();
+            connection.setRequestMethod("GET");
+            connection.setRequestProperty("Authorization", "Bearer "+API_KEY);
+
+            int responseCode = connection.getResponseCode(); //send request
+            if(responseCode != 200) {
+                return new ArrayList<>();
+            }
+            BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            String line = "";
+            while((line = reader.readLine()) != null) {
+                responseBody.append(line);
+            }
+            reader.close();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        try{
+            JSONObject businesses = new JSONObject(responseBody.toString());
+            return getRestaurantList(businesses.getJSONArray("businesses"));
+        } catch(JSONException e) {
+            e.printStackTrace();
+        }
+
+        return new ArrayList<>();
+    }
+
+    public static List<Restaurant> searchByCategory(float lat, float lon, List<String> categories){
+        StringBuilder category = new StringBuilder();
+        for(String s : categories){
+            category.append(s);
+            category.append(",");
+        }
+        if(category.charAt(category.length() - 1) == ','){
+            category.deleteCharAt(category.length() - 1);
+        }
+        String query = String.format("latitude=%s&longitude=%s&categories=%s&limit=10&radius=30000",lat, lon, category.toString());
+        String url = HOST + ENDPOINT + "?" + query;
+        StringBuilder responseBody = new StringBuilder();
+        try{
+            HttpURLConnection connection = (HttpURLConnection)new URL(url).openConnection();
+            connection.setRequestMethod("GET");
+            connection.setRequestProperty("Authorization", "Bearer "+API_KEY);
+
+            int responseCode = connection.getResponseCode(); //send request
+            if(responseCode != 200) {
+                return new ArrayList<>();
+            }
+            BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            String line = "";
+            while((line = reader.readLine()) != null) {
+                responseBody.append(line);
+            }
+            reader.close();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        try{
+            JSONObject businesses = new JSONObject(responseBody.toString());
+            return getRestaurantList(businesses.getJSONArray("businesses"));
+        } catch(JSONException e) {
+            e.printStackTrace();
+        }
+
+        return new ArrayList<>();
+    }
 }
