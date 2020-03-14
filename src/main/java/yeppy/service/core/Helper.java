@@ -82,4 +82,104 @@ public class Helper {
         }
         return false;
     }
+
+    public static int UserLikeBusiness(String userId, String businessId, String[] categories){
+        MySQLConnection db = new MySQLConnection();
+        try {
+            // Construct the query
+            String query =
+                    "INSERT INTO yeppy.like (user_id, business_id) VALUES (?, ?);";
+            // Create the prepared statement
+            PreparedStatement ps = db.getCon().prepareStatement(query);
+            // Set the parameters
+            ps.setString(1, userId);
+            ps.setString(2, businessId);
+
+            // Execute query
+            ps.execute();
+
+            // If a user likes a business he haven't liked before, then update user_preferences table
+            for(String category : categories){
+                if(!existCategory(userId, category)){
+                    String query2 =
+                            "INSERT INTO yeppy.user_preferences (user_id, category, count) VALUES (?, ?, ?);";
+                    // Create the prepared statement
+                    PreparedStatement ps2 = db.getCon().prepareStatement(query2);
+                    // Set the parameters
+                    ps2.setString(1, userId);
+                    ps2.setString(2, category);
+                    ps2.setInt(3, 1);
+
+                    // Execute query
+                    ps2.execute();
+                } else {
+                    String query2 =
+                            "UPDATE yeppy.user_preferences SET count = count + 1 WHERE user_id=? AND category=?;";
+                    // Create the prepared statement
+                    PreparedStatement ps2 = db.getCon().prepareStatement(query2);
+                    // Set the parameters
+                    ps2.setString(1, userId);
+                    ps2.setString(2, category);
+
+                    // Execute query
+                    ps2.execute();
+                }
+            }
+
+            return 1;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 2;
+    }
+
+    public static boolean existCategory(String userId, String category){
+        MySQLConnection db = new MySQLConnection();
+        try {
+            // Construct the query
+            String query =
+                    "SELECT COUNT(*) FROM yeppy.user_preferences WHERE user_id=? AND category=?;";
+            // Create the prepared statement
+            PreparedStatement ps = db.getCon().prepareStatement(query);
+            // Set the parameters
+            ps.setString(1, userId);
+            ps.setString(2,category);
+
+            // Execute query
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            if(rs.getInt(1)>0){
+                return true;
+            }
+            return false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
+
+    public static boolean existLike(String userId, String businessId){
+        MySQLConnection db = new MySQLConnection();
+        try {
+            // Construct the query
+            String query =
+                    "SELECT COUNT(*) FROM yeppy.like WHERE user_id=? AND business_id=?;";
+            // Create the prepared statement
+            PreparedStatement ps = db.getCon().prepareStatement(query);
+            // Set the parameters
+            ps.setString(1, userId);
+            ps.setString(2, businessId);
+
+            // Execute query
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            if(rs.getInt(1)>0){
+                return true;
+            }
+            return false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
 }
